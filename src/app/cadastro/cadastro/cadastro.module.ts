@@ -1,10 +1,6 @@
-import { CadastroModule } from './cadastro/cadastro/cadastro.module';
+import { CadastroComponent } from './cadastro.component';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { CadastroComponent } from './cadastro/cadastro/cadastro.component';
+import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import {FileUploadModule} from 'primeng/fileupload';
 import {RadioButtonModule} from 'primeng/radiobutton';
@@ -14,19 +10,17 @@ import {CheckboxModule} from 'primeng/checkbox';
 import {InputMaskModule} from 'primeng/inputmask';
 import {TableModule} from 'primeng/table';
 import {ToastModule} from 'primeng/toast';
-
+import { BrowserModule } from '@angular/platform-browser';
+import {CardModule} from 'primeng/card';
+import { CadastroRoutingModule } from './cadastro-routing.module';
 import { FormsModule } from '@angular/forms';
-import { CardModule } from 'primeng/card';
-import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-  ],
+  declarations: [CadastroComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+    CommonModule,
+    CadastroRoutingModule,
     FormsModule,
     CardModule,
     ButtonModule,
@@ -38,9 +32,7 @@ import { HomeComponent } from './home/home.component';
     TableModule,
     ToastModule,
     InputMaskModule,
-    CadastroModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    BrowserModule
+  ]
 })
-export class AppModule { }
+export class CadastroModule { }
