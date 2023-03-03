@@ -1,19 +1,26 @@
+import { HomeModule } from './home/home.module';
 import { CadastroModule } from './cadastro/cadastro/cadastro.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro/cadastro.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '',
+    redirectTo: 'home',
     pathMatch: 'full'
 
   },
   {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
     path:'cadastro',
-    component: CadastroComponent
-  }
+    loadChildren: () => CadastroModule
+  },
+
 ];
 
 @NgModule({
