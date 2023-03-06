@@ -1,2 +1,123 @@
-<img src="assets/images/" alt="">
-<h1>teste</h1>
+<div
+  class="h-full w-full flex align-items-center justify-content-center flex-column"
+>
+  <div>
+    <div class="flex flex-row font-bold">
+      <img class="w-9rem h-5rem mr-8" src="assets/images/logo.gif" alt="" />
+      <p class="ml-8 text-xl">
+        Secretaria de Finanças<br />
+        Débitos de Tributos Municipais - IPTU/ITU, ITBI e Taxas<br />
+        Consulta e Emissão de Guia para Pagamento (DUAM)
+      </p>
+    </div>
+
+    <div>
+      <p class="text-xl font-medium ml-5">
+        Informe o número da Inscrição Cadastral, escolha uma das Datas para
+        Pagamento e aperte o botão "Consultar".<br />
+        Na tela seguinte aparecerão,corrigidos até a data para pagamento, os
+        débitos referentes à sua inscrição.
+      </p>
+    </div>
+  </div>
+
+  <!-- AREA DE CADASTRO. -->
+
+  <div class="grid p-fluid h-auto flex-row w-7 justify-content-center">
+    <div
+      class="item flex justify-content-center align-items-center col-2 md:col-2 text-green-700 mr-3 bg-bluegray-100"
+    >
+      <h2>IPTU/ITU,ITBI<br />e Taxas</h2>
+    </div>
+    <div class="item grid p-fluid col-2 md:col-5 bg-bluegray-100">
+      <div class="col-2 md:col-5">
+        <div class="dados">
+          <label for="cadastral">Inscrição Cadastral</label>
+        </div>
+        <div class="dados">
+          <label for="processo">Processo</label>
+        </div>
+        <div class="dados">
+          <label for="ano">Ano</label>
+        </div>
+        <div class="dados">
+          <label for="">Parcela</label>
+        </div>
+        <div class="dados">
+          <label for="">dt_pagamento</label>
+        </div>
+      </div>
+      <div class="col-2 md:col-7">
+        <div>
+          <input type="number" class="input" name="cadastral" id="cadastral" />
+        </div>
+        <div>
+          <input type="number" class="input" name="processo" id="processo" />
+        </div>
+        <div>
+          <input type="number" class="input" name="ano" id="ano" />
+        </div>
+        <div>
+          <input type="number" class="input" name="parcela" id="parcela" />
+        </div>
+        <div>
+          <input
+            type="date"
+            class="input"
+            name="dt_pagamento"
+            id="dt_pagamento"
+          />
+        </div>
+      </div>
+
+      <!-- Recptcha -->
+
+      <div class="card">
+        <p-toast></p-toast>
+        <p-captcha
+          siteKey="6Lf2XQkTAAAAANcvOwYqPxWL4iZDksFqHpS39GDA"
+          (onResponse)="showResponse($event)"
+        ></p-captcha>
+      </div>
+
+      <!-- botões -->
+      <div class="mt-2 mr-8">
+        <button
+          pButton
+          type="button"
+          label="Consultar"
+          class="p-button-outlined"
+        ></button>
+      </div>
+      <div class="mt-2">
+        <button
+          pButton
+          type="button"
+          label="Consultar solicitação"
+          class="p-button-outlined"
+        ></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid p-fluid w-7">
+    <div class="col-2 md:col-5 mr-4 text-xl">
+      <p>
+        Após visualizar os débitos, você pode imprimir uma guia para pagamento,
+        escolhendo o débito e apertando o botão "Gerar Guia (DUAM) para
+        impressão" para gerar a guia na tela. Aguarde até que a guia apareça
+        completamente em sua tela e então, aperte o botão "Imprimir" (Print) do
+        seu programa de navegação na Internet.
+      </p>
+    </div>
+    <div class="col-2 md:col-5 text-xl">
+      <p>
+        A Guia para Pagamento (DUAM) somente será aceita na rede bancária
+        credenciada nas seguintes condições:<br>
+        . Emissão em Impressora a Jato de Tinta ou Laser<br>
+        . Impressora configurada para Papel Formato A4<br>
+        . Qualidade de Impressão Normal ou Superior
+      </p>
+    </div>
+  </div>
+</div>

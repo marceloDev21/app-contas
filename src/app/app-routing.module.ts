@@ -14,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    loadChildren: () => HomeModule
   },
   {
     path:'cadastro',

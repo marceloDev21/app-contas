@@ -1,3 +1,4 @@
+
 import { CadastroComponent } from './cadastro.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     CadastroRoutingModule,
+
     FormsModule,
     CardModule,
     ButtonModule,
@@ -32,7 +34,7 @@ import { FormsModule } from '@angular/forms';
     TableModule,
     ToastModule,
     InputMaskModule,
-    BrowserModule
+
   ]
 })
 export class CadastroModule { }
