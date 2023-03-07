@@ -1,0 +1,49 @@
+{
+  "data":[
+    {
+      "descricao": "IPTU ESPONTANEO UNIFICADO PARCELADO",
+			"ano": 2020,
+      "parcela": 16,
+      "vencimento": "16/03/2023",
+      "debito": 229.57,
+      "acrescimos":6.06,
+      "total":235.63
+    },
+    {
+      "descricao": "IPTU ESPONTANEO UNIFICADO PARCELADO",
+			"ano": 2020,
+      "parcela": 17,
+      "vencimento": "16/03/2023",
+      "debito": 229.57,
+      "acrescimos":6.07,
+      "total":229.57
+    },
+    {
+      "descricao": "IPTU ESPONTANEO UNIFICADO PARCELADO",
+			"ano": 2020,
+      "parcela": 18,
+      "vencimento": "16/03/2023",
+      "debito": 229.57,
+
+      "total":229.57
+    },
+    {
+      "descricao": "IPTU ESPONTANEO UNIFICADO PARCELADO",
+			"ano": 2020,
+      "parcela": 19,
+      "vencimento": "16/03/2023",
+      "debito": 229.57,
+
+      "total":229.57
+    },
+    {
+      "descricao": "IPTU ESPONTANEO UNIFICADO PARCELADO",
+			"ano": 2020,
+      "parcela": 20,
+      "vencimento": "16/03/2023",
+      "debito": 229.57,
+      "total":229.57
+    }
+
+  ]
+}

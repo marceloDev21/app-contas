@@ -1,0 +1,105 @@
+<div class="m-7 mt-4">
+  <p-table [value]="impostos" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="bg-green-400">Escolha</th>
+        <th class="bg-green-400">Descrição do Tributo</th>
+        <th class="bg-green-400">Ano</th>
+        <th class="bg-green-400">Parcela</th>
+        <th class="bg-green-400">Vencimento</th>
+        <th class="bg-green-400">Debito</th>
+        <th class="bg-green-400">Acréscimos</th>
+        <th class="bg-green-400">Total</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-imposto>
+      <tr>
+        <td class="bg-gray-400 flex justify-content-center">
+          <input type="radio" />
+        </td>
+        <td>{{ imposto.descricao }}</td>
+        <td>{{ imposto.ano }}</td>
+        <td>{{ imposto.parcela }}</td>
+        <td>{{ imposto.vencimento }}</td>
+        <td>{{ imposto.debito }}</td>
+        <td>{{ imposto.acrescimos }}</td>
+        <td>{{ imposto.total }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p>
+    Escolha um débito, aperte o botão abaixo e aguarde até que a Guia para
+    pagamento apareça totalmente na sua tela. Certifique-se de que sua
+    impressora a jato de tinta ou Laser esteja configurada para
+    <span style="color: rgb(13, 115, 156)">
+      QUALIDADE DE IMPRESSÃO NORMAL, ou superior e FORMATO DE PAPEL A4</span
+    >, e então aperte o botão IMPRIMIR (PRINT) do seu programa.
+  </p>
+
+  <!-- POPUP -->
+
+  <p-button
+    class="flex justify-content-end"
+    (click)="showBasicDialog()"
+    label="Realizar pagamento"
+  ></p-button>
+  <p-dialog
+    header="Realizar Pagamento"
+    [(visible)]="displayBasic"
+    [modal]="true"
+    [draggable]="false"
+    [resizable]="false"
+    [style]="{ width: '50vw' }"
+  >
+    <p class="flex justify-content-center text-base">
+      Para prosseguir é necessário informar alguns dados.
+    </p>
+    <div
+      class="grid p-fluid col-2 md:col-10 flex justify-content-center align-items-center ml-8"
+    >
+      <div class="col-2 md:col-4">
+        <div>
+          <label class="text-xl" for="email">Email</label>
+        </div>
+        <div>
+          <label class="text-xl" for="telefone">Telefone (COM DDD)</label>
+        </div>
+      </div>
+      <div class="col-2 md:col-4">
+        <div>
+          <input class="mb-2 text-base" name="email" pInputText />
+        </div>
+        <div>
+          <!-- <input type="number" class="w-5 h-2rem text-base" name="telefone" pInputText /> -->
+          <p-inputMask
+            class="w-2"
+            mask="(99)999999999"
+            placeholder="(99)999999999"
+          ></p-inputMask>
+        </div>
+      </div>
+    </div>
+    <ng-template pTemplate="footer">
+      <p-button
+        icon="pi pi-credit-card"
+        (click)="displayBasic = false"
+        label="Pagar com Parcele Contas"
+        styleClass="p-button-outlined text-bluegray-900 surface-300"
+        routerLink="/cadastro"
+      ></p-button>
+
+      <p-button
+        (click)="displayBasic = false"
+        label="Pagar com UniversalPay"
+        styleClass="p-button-outlined text-bluegray-900 surface-300"
+      ></p-button>
+
+      <p-button
+        (click)="displayBasic = false"
+        label="Pagar com Asteroide"
+        styleClass="p-button-outlined text-bluegray-900 surface-300"
+      ></p-button>
+    </ng-template>
+  </p-dialog>
+</div>

@@ -1,3 +1,4 @@
+import { ConsultarModule } from './consultar/consultar.module';
 import { HomeModule } from './home/home.module';
 import { CadastroModule } from './cadastro/cadastro/cadastro.module';
 import { NgModule } from '@angular/core';
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path:'cadastro',
     loadChildren: () => CadastroModule
+  },
+  {
+    path:'consultar',
+    loadChildren: () => ConsultarModule
   },
 
 ];

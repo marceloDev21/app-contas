@@ -11,7 +11,6 @@ import {CheckboxModule} from 'primeng/checkbox';
 import {InputMaskModule} from 'primeng/inputmask';
 import {TableModule} from 'primeng/table';
 import {ToastModule} from 'primeng/toast';
-import { BrowserModule } from '@angular/platform-browser';
 import {CardModule} from 'primeng/card';
 import { CadastroRoutingModule } from './cadastro-routing.module';
 import { FormsModule } from '@angular/forms';

@@ -20,10 +20,12 @@ import { CardModule } from 'primeng/card';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ConsultarComponent } from './consultar/consultar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
 
   ],
   imports: [

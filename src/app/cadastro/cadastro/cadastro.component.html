@@ -1,80 +1,105 @@
-<div class="m-8 grid p-fluid">
-  <p-card class="col-10 md:col-7" header="Informações pessoais">
-    <div class="grid p-fluid">
-      <div class="col-12 md:col-3">
-        <label class="text-xl" for="nome">Nome</label>
-        <input name="nome" pInputText />
-      </div>
-      <div class="col-12 md:col-3">
-        <label class="text-xl" for="email">Email</label>
-        <input name="email" pInputText />
-      </div>
+<div class="body">
+  <!-- Logo -->
+  <div class="w-full flex justify-content-center">
+    <img class="h-5rem" src="assets/images/parcele-contas.png" alt="" />
+  </div>
 
-      <div class="col-12 md:col-3">
-        <label class="text-xl" for="documento">Documento</label>
-        <input name="documento" pInputText />
-      </div>
-      <div class="col-12 md:col-3">
-        <label class="text-xl" for="telefone">Telefone</label>
-        <input name="telefone" pInputText />
-      </div>
+  <!-- CADASTRO -->
+  <div class="m-8 grid p-fluid">
+    <p-card class="col-10 md:col-7" header="Informações pessoais">
+      <div class="grid p-fluid">
+        <div class="col-12 md:col-3">
+          <label class="text-xl" for="nome">Nome</label>
+          <input name="nome" pInputText />
+        </div>
+        <div class="col-12 md:col-3">
+          <label class="text-xl" for="email">Email</label>
+          <input name="email" pInputText />
+        </div>
 
-      <div class="col-12 md:col-10">
-        <h2>Informações do Boleto</h2>
-      </div>
+        <div class="col-12 md:col-3">
+          <label class="text-xl" for="documento">Documento</label>
+          <input name="documento" pInputText />
+        </div>
+        <div class="col-12 md:col-3">
+          <label class="text-xl" for="telefone">Telefone</label>
+          <input name="telefone" pInputText />
+        </div>
 
-      <div class="col-12 md:col-3">
-        <label class="text-xl" for="codigo_barras">Codigo de barras</label>
-        <input name="pai" pInputText />
+        <div class="col-12 md:col-10">
+          <h2>Informações do Boleto</h2>
+        </div>
+
+        <div class="col-12 md:col-3">
+          <label class="text-xl" for="codigo_barras">Codigo de barras</label>
+          <input name="pai" pInputText />
+        </div>
+        <div class="col-12 md:col-3">
+          <label class="text-xl" for="dados_pag">Dados do pagamento</label>
+          <input name="mae" pInputText />
+        </div>
+        <div class="col-12 md:col-3">
+          <label class="text-xl" for="categoria">Categoria</label>
+          <input name="categoria" pInputText />
+        </div>
+        <div class="col-12 md:col-3">
+          <label class="text-xl" for="valor">Valor</label>
+          <input name="valor" pInputText />
+        </div>
+        <div class="col-12 md:col-3">
+          <label class="text-xl" for="parcelas">Parcelas</label>
+          <input name="parcelas" pInputText />
+        </div>
+
+        <div class="col-12 flex justify-content-end mt-4">
+          <div class="flex col-3">
+            <button
+              class="p-button-primary"
+              pButton
+              label="Prova de vida"
+              icon="pi pi-user"
+              iconPos="right"
+            ></button>
+          </div>
+        </div>
       </div>
-      <div class="col-12 md:col-3">
-        <label class="text-xl" for="dados_pag">Dados do pagamento</label>
-        <input name="mae" pInputText />
+    </p-card>
+
+    <!-- CARTAO -->
+    <p-card class="col-10 md:col-5" header="Informações do Cartão">
+      <div class="col-12 md:col-6">
+        <label class="text-xl" for="num_cartao">Numero do cartão</label>
+        <!-- <input name="parcelas" pInputText /> -->
+        <div class="p-inputgroup">
+          <span class="p-inputgroup-addon"
+            ><i class="pi pi-credit-card"></i
+          ></span>
+          <input type="text" pInputText placeholder="0000 0000 0000 0000" />
+        </div>
       </div>
-      <div class="col-12 md:col-3">
-        <label class="text-xl" for="categoria">Categoria</label>
-        <input name="categoria" pInputText />
-      </div>
-      <div class="col-12 md:col-3">
-        <label class="text-xl" for="valor">Valor</label>
-        <input name="valor" pInputText />
-      </div>
-      <div class="col-12 md:col-3">
-        <label class="text-xl" for="parcelas">Parcelas</label>
+      <div class="col-12 md:col-6">
+        <label class="text-xl" for="parcelas">Nome completo</label>
         <input name="parcelas" pInputText />
       </div>
-
-      <div class="col-12 flex justify-content-end mt-4">
-        <div class="flex col-3">
+      <div class="col-12 md:col-6">
+        <label class="text-xl" for="parcelas">Validade</label>
+        <input name="parcelas" pInputText />
+      </div>
+      <div class="col-12 md:col-6">
+        <label class="text-xl" for="parcelas">CV</label>
+        <p-inputMask mask="999" placeholder="000"></p-inputMask>
+      </div>
+      <div class="col-7 mt-3">
+        <div class="flex col-6">
           <button
-            class="p-button-primary"
+            class="p-button-primary bg-green-400"
             pButton
-            label="Prova de vida"
-            icon="pi pi-user"
+            label="Pagar"
+            icon="pi pi-check"
             iconPos="right"
           ></button>
         </div>
       </div>
-
-    </div>
-  </p-card>
-  <p-card class="col-10 md:col-5 " header="Informações do Cartão">
-    <div class="col-12 md:col-6">
-      <label class="text-xl" for="num_cartao">Numero do cartão</label>
-      <input name="parcelas" pInputText />
-    </div>
-    <div class="col-12 md:col-6">
-      <label class="text-xl" for="parcelas">Nome completo</label>
-      <input name="parcelas" pInputText />
-    </div>
-    <div class="col-12 md:col-6">
-      <label class="text-xl" for="parcelas">Validade</label>
-      <input name="parcelas" pInputText />
-    </div>
-    <div class="col-12 md:col-6">
-      <label class="text-xl" for="parcelas">CV</label>
-      <input name="parcelas" pInputText />
-    </div>
-
-  </p-card>
+    </p-card>
+  </div>
 </div>

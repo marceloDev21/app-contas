@@ -1,3 +1,4 @@
+import { ConsultarService } from './../consultar/consultar.service';
 import { HomeService } from './../home/home.service';
 import { CadastroService } from './../cadastro/cadastro/cadastro.service';
 import { NgModule } from '@angular/core';
@@ -23,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
    */
   providers: [
    CadastroService,
-   HomeService
+   HomeService,
+   ConsultarService
 
   ]
 })

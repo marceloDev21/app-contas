@@ -6,7 +6,9 @@
       <img class="w-9rem h-5rem mr-8" src="assets/images/logo.gif" alt="" />
       <p class="ml-8 text-xl">
         Secretaria de Finanças<br />
-        Débitos de Tributos Municipais - IPTU/ITU, ITBI e Taxas<br />
+        <span style="color: rgb(16, 119, 24)">
+          Débitos de Tributos Municipais - IPTU/ITU, ITBI e Taxas</span
+        ><br />
         Consulta e Emissão de Guia para Pagamento (DUAM)
       </p>
     </div>
@@ -44,7 +46,7 @@
           <label for="">Parcela</label>
         </div>
         <div class="dados">
-          <label for="">dt_pagamento</label>
+          <label for="">Data do pagamento</label>
         </div>
       </div>
       <div class="col-2 md:col-7">
@@ -86,7 +88,8 @@
           pButton
           type="button"
           label="Consultar"
-          class="p-button-outlined"
+          class="p-button-outlined text-bluegray-900 surface-300 h-2rem"
+          routerLink="/consultar"
         ></button>
       </div>
       <div class="mt-2">
@@ -94,7 +97,7 @@
           pButton
           type="button"
           label="Consultar solicitação"
-          class="p-button-outlined"
+          class="p-button-outlined text-red-600 surface-300 h-2rem"
         ></button>
       </div>
     </div>
@@ -104,19 +107,23 @@
     <div class="col-2 md:col-5 mr-4 text-xl">
       <p>
         Após visualizar os débitos, você pode imprimir uma guia para pagamento,
-        escolhendo o débito e apertando o botão "Gerar Guia (DUAM) para
-        impressão" para gerar a guia na tela. Aguarde até que a guia apareça
-        completamente em sua tela e então, aperte o botão "Imprimir" (Print) do
-        seu programa de navegação na Internet.
+        escolhendo o débito e apertando o botão<b>
+          "Gerar Guia (DUAM) para impressão"</b
+        >
+        para gerar a guia na tela. Aguarde até que a guia apareça completamente
+        em sua tela e então, aperte o botão "Imprimir" (Print) do seu programa
+        de navegação na Internet.
       </p>
     </div>
     <div class="col-2 md:col-5 text-xl">
       <p>
-        A Guia para Pagamento (DUAM) somente será aceita na rede bancária
-        credenciada nas seguintes condições:<br>
-        . Emissão em Impressora a Jato de Tinta ou Laser<br>
-        . Impressora configurada para Papel Formato A4<br>
-        . Qualidade de Impressão Normal ou Superior
+        <span style="color: rgb(16, 119, 24)">
+          A Guia para Pagamento (DUAM) somente será aceita na rede bancária
+          credenciada nas seguintes condições:</span
+        ><br />
+        <B>. Emissão em Impressora a Jato de Tinta ou Laser<br /></B>
+        <B>. Impressora configurada para Papel Formato A4<br /></B>
+        <B>. Qualidade de Impressão Normal ou Superior</B>
       </p>
     </div>
   </div>
